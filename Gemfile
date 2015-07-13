@@ -48,6 +48,7 @@ group :development, :test do
   gem 'spring'
 
   gem 'pry'
-  gem 'rspec'
+  gem 'shoulda-matchers'
+  gem 'rspec-rails'
   gem 'capybara'
 end
