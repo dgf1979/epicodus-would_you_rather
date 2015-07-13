@@ -30,9 +30,11 @@ class ChoicesController < ApplicationController
       if @choice.save
         format.html { redirect_to @choice, notice: 'Choice was successfully created.' }
         format.json { render :show, status: :created, location: @choice }
+        format.js
       else
         format.html { render :new }
         format.json { render json: @choice.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end

@@ -17,14 +17,6 @@
     <div class="col-lg-2 col-md-2 col-xs-12 thumb">
       <div id="vote-display">
         <h1 id="or">OR</h1>
-        <div id="vote-count">
-          <p>
-            <%= @choice.option_a_votes %> votes for "<%= @choice.option_a %>"
-          </p>
-          <p>
-            <%= @choice.option_b_votes %> votes for "<%= @choice.option_b %>"
-          </p>
-        </div>
       </div>
     </div>
 
@@ -38,7 +30,7 @@
   </div>
   <div class="row">
 
-    <%= form_for(@choice) do |f| %>
+    <%= form_for(@choice, remote: true) do |f| %>
     <%= f.text_field :option_a_votes, value: 0 %>
     <%= f.text_field :option_b_votes, value: 0 %>
     <div class="actions">
