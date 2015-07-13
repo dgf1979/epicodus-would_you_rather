@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-lg-12">
+      <h1 class="page-header"><%= @choice.option %>...</h1>
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-xs-6 col-lg-offset-1 col-md-offset-1 thumb">
+      <a class="thumbnail" href="#">
+        <img class="img-responsive" src="<%= @choice.option_a_image %>" alt="">
+        <span><%= @choice.option_a %></span>
+      </a>
+    </div>
+
+    <div class="col-lg-2 col-md-2 col-xs-12 thumb">
+      Show votey stuff in here later
+    </div>
+
+    <div class="col-lg-3 col-md-4 col-xs-6 thumb">
+      <a class="thumbnail" href="#">
+        <img class="img-responsive" src="<%= @choice.option_b_image %>" alt="">
+        <span><%= @choice.option_b %></span>
+      </a>
+    </div>
+
+  </div>
+</div>
+
+<%= link_to 'Edit', edit_choice_path(@choice) %> |
+<%= link_to 'Back', choices_path %>
