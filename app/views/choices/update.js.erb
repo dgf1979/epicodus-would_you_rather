@@ -1,3 +1,5 @@
 console.log("update.js.erb");
-$("form input:text").val("0");
-$("#vote-display").html("<%= j (render 'votes') %>");
+$(document).ready(function() {
+  $("form input:text").val("0");
+  $("#vote-display").html("<%= j (render 'votes', choice: @choice) %>");  
+});

@@ -1,0 +1,27 @@
+<div class="row">
+
+  <div class="col-lg-12">
+    <h1 class="page-header"><%= choice.option %>...</h1>
+  </div>
+
+  <div class="col-lg-3 col-sm-5 col-lg-offset-1 thumb">
+    <a id="a" class="thumbnail" href="#">
+      <img class="img-responsive" src="<%= choice.option_a_image %>" alt="">
+      <span>A: <%= choice.option_a %></span>
+    </a>
+  </div>
+
+  <div class="col-lg-2 col-sm-2">
+    <div id="vote-display">
+      <h1 id="or">OR</h1>
+    </div>
+  </div>
+
+  <div class="col-lg-3 col-sm-5 thumb">
+    <a id="b" class="thumbnail" href="#">
+      <img class="img-responsive" src="<%= choice.option_b_image %>" alt="">
+      <span>B: <%= choice.option_b %></span>
+    </a>
+  </div>
+
+</div>
