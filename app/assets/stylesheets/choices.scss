@@ -7,8 +7,17 @@
   text-align: center;
 }
 
+.thumb a:link {
+  text-decoration: none;
+}
+
 .thumbnail span {
   font-size: 2em;
+}
+
+#vote-display {
+  width: 100%;
+  text-align: center;
 }
 
 .hidden-form {
