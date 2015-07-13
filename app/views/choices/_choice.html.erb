@@ -5,23 +5,37 @@
   </div>
 
   <div class="col-lg-3 col-sm-5 col-lg-offset-1 thumb">
-    <a id="a" class="thumbnail" href="#">
+    <a id="a" data-id="<%= choice.id %>" class="thumbnail" href="#">
       <img class="img-responsive" src="<%= choice.option_a_image %>" alt="">
       <span>A: <%= choice.option_a %></span>
     </a>
   </div>
 
   <div class="col-lg-2 col-sm-2">
-    <div id="vote-display">
+    <div id="vote-display-<%= choice.id %>">
       <h1 id="or">OR</h1>
     </div>
   </div>
 
   <div class="col-lg-3 col-sm-5 thumb">
-    <a id="b" class="thumbnail" href="#">
+    <a id="b" data-id="<%= choice.id %>" class="thumbnail" href="#">
       <img class="img-responsive" src="<%= choice.option_b_image %>" alt="">
       <span>B: <%= choice.option_b %></span>
     </a>
   </div>
+
+</div>
+<div class="row hidden-form" data-id="<%= choice.id %>">
+
+  <%= form_for(choice, remote: true) do |f| %>
+  <%= f.text_field :option_a_votes, value: 0 %>
+  <%= f.text_field :option_b_votes, value: 0 %>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+  <% end %>
+
+  <%= link_to 'Edit', edit_choice_path(choice) %> |
+  <%= link_to 'Back', choices_path %>
 
 </div>

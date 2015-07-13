@@ -1,5 +1,7 @@
 console.log("update.js.erb");
 $(document).ready(function() {
   $("form input:text").val("0");
-  $("#vote-display").html("<%= j (render 'votes', choice: @choice) %>");  
+  var renderDiv = "#vote-display-" + "<%= @choice.id %>";
+  console.log("render votes display to div with id: " + renderDiv)
+  $(renderDiv).html("<%= j (render 'votes', choice: @choice) %>");
 });

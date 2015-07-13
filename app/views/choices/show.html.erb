@@ -1,45 +1,5 @@
 <p id="notice"><%= notice %></p>
 
 <div class="container">
-  <div class="row">
-
-    <div class="col-lg-12">
-      <h1 class="page-header"><%= @choice.option %>...</h1>
-    </div>
-
-    <div class="col-lg-3 col-sm-5 col-lg-offset-1 thumb">
-      <a id="a" class="thumbnail" href="#">
-        <img class="img-responsive" src="<%= @choice.option_a_image %>" alt="">
-        <span>A: <%= @choice.option_a %></span>
-      </a>
-    </div>
-
-    <div class="col-lg-2 col-sm-2">
-      <div id="vote-display">
-        <h1 id="or">OR</h1>
-      </div>
-    </div>
-
-    <div class="col-lg-3 col-sm-5 thumb">
-      <a id="b" class="thumbnail" href="#">
-        <img class="img-responsive" src="<%= @choice.option_b_image %>" alt="">
-        <span>B: <%= @choice.option_b %></span>
-      </a>
-    </div>
-
-  </div>
-  <div class="row hidden-form">
-
-    <%= form_for(@choice, remote: true) do |f| %>
-    <%= f.text_field :option_a_votes, value: 0 %>
-    <%= f.text_field :option_b_votes, value: 0 %>
-    <div class="actions">
-      <%= f.submit %>
-    </div>
-    <% end %>
-
-    <%= link_to 'Edit', edit_choice_path(@choice) %> |
-    <%= link_to 'Back', choices_path %>
-
-  </div>
+  <%= render @choice %>
 </div>
