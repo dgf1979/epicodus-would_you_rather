@@ -5,7 +5,6 @@ $(document).ready(function() {
     var voteInputID = $("#choice_option_" + voteforID + "_votes");
     voteInputID.val("1");
     var form = voteInputID.parent('form');
-    $(".thumbnail").val("0");
     form.submit();
   });
 });
