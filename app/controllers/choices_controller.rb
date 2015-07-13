@@ -40,13 +40,19 @@ class ChoicesController < ApplicationController
   # PATCH/PUT /choices/1
   # PATCH/PUT /choices/1.json
   def update
+
+    params[:choice][:option_a_votes] = @choice.option_a_votes + params[:choice][:option_a_votes].to_i
+    params[:choice][:option_b_votes] = @choice.option_b_votes + params[:choice][:option_b_votes].to_i
+
     respond_to do |format|
       if @choice.update(choice_params)
         format.html { redirect_to @choice, notice: 'Choice was successfully updated.' }
         format.json { render :show, status: :ok, location: @choice }
+        format.js
       else
         format.html { render :edit }
         format.json { render json: @choice.errors, status: :unprocessable_entity }
+        format.js
       end
     end
   end
@@ -58,6 +64,7 @@ class ChoicesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to choices_url, notice: 'Choice was successfully destroyed.' }
       format.json { head :no_content }
+      format.js
     end
   end
 
@@ -69,6 +76,6 @@ class ChoicesController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def choice_params
-      params.require(:choice).permit(:option, :option_a, :option_b, :option_a_image, :option_b_image)
+      params.require(:choice).permit(:option, :option_a, :option_b, :option_a_image, :option_b_image, :option_a_votes, :option_b_votes)
     end
 end
