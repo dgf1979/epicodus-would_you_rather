@@ -1,33 +1,3 @@
 <div class="container">
   <%= render @choices %>
 </div>
-
-<table style="display: none">
-  <thead>
-    <tr>
-      <th>Option a</th>
-      <th>Option b</th>
-      <th>Option a votes</th>
-      <th>Option b votes</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @choices.each do |choice| %>
-      <tr>
-        <td><%= choice.option_a %></td>
-        <td><%= choice.option_b %></td>
-        <td><%= choice.option_a_votes %></td>
-        <td><%= choice.option_b_votes %></td>
-        <td><%= link_to 'Show', choice %></td>
-        <td><%= link_to 'Edit', edit_choice_path(choice) %></td>
-        <td><%= link_to 'Destroy', choice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Choice', new_choice_path %>

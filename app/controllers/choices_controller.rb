@@ -66,7 +66,7 @@ class ChoicesController < ApplicationController
     respond_to do |format|
       format.html { redirect_to choices_url, notice: 'Choice was successfully destroyed.' }
       format.json { head :no_content }
-      format.js
+      format.js { redirect_to choices_url }
     end
   end
 
