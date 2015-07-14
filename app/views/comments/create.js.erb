@@ -1,0 +1,8 @@
+console.log("comments/create.js.erb");
+
+$(document).ready(function() {
+  var reloadCommentsDivID = "#comments-display-for-choice-" + "<%= @choice.id %>";
+  $(reloadCommentsDivID).html("<%= j (render @choice.comments) %>");
+
+  $("input[type='text'][name='comment[text]']").val("");
+});
