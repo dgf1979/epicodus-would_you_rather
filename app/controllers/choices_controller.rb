@@ -11,6 +11,7 @@ class ChoicesController < ApplicationController
   # GET /choices/1
   # GET /choices/1.json
   def show
+    @new_comment = Comment.new
   end
 
   # GET /choices/new
