@@ -42,4 +42,7 @@ group :development, :test do
   gem 'shoulda-matchers'
   gem 'rspec-rails'
   gem 'capybara'
+  # gem 'launchy'
+  gem 'poltergeist'
+  gem 'simplecov', require: false
 end
