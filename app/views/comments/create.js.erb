@@ -1,8 +1,10 @@
 console.log("comments/create.js.erb");
 
-$(document).ready(function() {
-  var reloadCommentsDivID = "#comments-display-for-choice-" + "<%= @choice.id %>";
-  $(reloadCommentsDivID).html("<%= j (render @choice.comments) %>");
+var reloadCommentsDivID = "#comments-display-for-choice-" + "<%= @choice.id %>";
 
+<% if @comment.errors.count == 0 %>
+  $(reloadCommentsDivID).html("<%= j (render @choice.comments) %>");
   $("input[type='text'][name='comment[text]']").val("");
-});
+<% else %>
+  $(reloadCommentsDivID).prepend("<div class='error'>error - you have to provide a value</div>");
+<% end %>
