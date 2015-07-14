@@ -28,7 +28,7 @@
   <div class="col-lg-4 col-sm-12">
     <%= form_for([choice, @new_comment], remote: true) do |f| %>
       <div class="row">
-        <div class="input-group">
+        <div class="input-group comment-control">
           <%= f.text_field :text, class: "form-control" %>
           <span class="input-group-btn">
             <%= f.submit "Comment", class: "btn btn-default" %>

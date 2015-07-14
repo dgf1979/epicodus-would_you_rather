@@ -1,5 +1,5 @@
 <div class="display-comment">
   <p>
-    <span class="comment-created-at"><%= comment.created_at %></span> <%= comment.text %>
+    <span class="shrink-and-fade">@<%= human_time(comment.created_at) %></span>: <%= comment.text %>
   </p>
 </div>
