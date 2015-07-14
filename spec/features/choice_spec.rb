@@ -41,6 +41,28 @@ describe "destroy choice" do
     visit choice_path(choice_one)
     click_on "Menu"
     click_on "Delete this Choice"
-    expect(page).to_not have_content("Would you like to") 
+    expect(page).to_not have_content("Would you like to")
+  end
+end
+
+describe "edit choices" do
+  it "should change the values of a choice" do
+    choice_one = Choice.create({ option: "Would you like to", option_a: "this", option_b: "that" })
+    visit edit_choice_path(choice_one)
+    fill_in "Option", with: "Would you rather code in"
+    fill_in "Option a", with: "Ruby"
+    fill_in "Option b", with: "Javascript"
+    click_on 'Update Choice'
+    expect(page).to  have_content("Javascript") && have_content("Ruby")
+  end
+
+  it "should fail to change the values of a choice given bad input" do
+    choice_one = Choice.create({ option: "Would you like to", option_a: "this", option_b: "that" })
+    visit edit_choice_path(choice_one)
+    fill_in "Option", with: ""
+    fill_in "Option a", with: "Ruby"
+    fill_in "Option b", with: "Javascript"
+    click_on 'Update Choice'
+    expect(page).to  have_content("error")
   end
 end

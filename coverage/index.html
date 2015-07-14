@@ -14,27 +14,27 @@
       <img src="./assets/0.10.0/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-14T11:57:37-07:00">2015-07-14T11:57:37-07:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2015-07-14T12:02:26-07:00">2015-07-14T12:02:26-07:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     <span class="group_name">All Files</span>
-    (<span class="covered_percent"><span class="green">93.2%</span></span>
+    (<span class="covered_percent"><span class="green">100.0%</span></span>
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.21
+         1.36
        </span>
     </span> hits/line)
   </h2>
   <a name="AllFiles"></a>
   <div>
     <b>23</b> files in total.
-    <b>147</b> relevant lines. 
-    <span class="green"><b>137</b> lines covered</span> and
-    <span class="red"><b>10</b> lines missed </span>
+    <b>164</b> relevant lines. 
+    <span class="green"><b>164</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -62,12 +62,12 @@
       
       <tr>
         <td class="strong"><a href="#9f834db1300564fc065628d44cfd6b4420ff978d" class="src_link" title="app/controllers/choices_controller.rb">app/controllers/choices_controller.rb</a></td>
-        <td class="red strong">75.0 %</td>
+        <td class="green strong">100.0 %</td>
         <td>83</td>
         <td>40</td>
-        <td>30</td>
-        <td>10</td>
-        <td>1.2</td>
+        <td>40</td>
+        <td>0</td>
+        <td>1.8</td>
       </tr>
       
       <tr>
@@ -243,9 +243,9 @@
       <tr>
         <td class="strong"><a href="#6fae8404a20361d236886cd6f34c85867b52e018" class="src_link" title="spec/features/choice_spec.rb">spec/features/choice_spec.rb</a></td>
         <td class="green strong">100.0 %</td>
-        <td>46</td>
-        <td>33</td>
-        <td>33</td>
+        <td>68</td>
+        <td>50</td>
+        <td>50</td>
         <td>0</td>
         <td>1.0</td>
       </tr>
@@ -277,7 +277,7 @@
         <td>15</td>
         <td>15</td>
         <td>0</td>
-        <td>2.2</td>
+        <td>2.5</td>
       </tr>
       
     </tbody>
@@ -347,11 +347,11 @@
         <div class="source_table" id="9f834db1300564fc065628d44cfd6b4420ff978d">
   <div class="header">
     <h3>app/controllers/choices_controller.rb</h3>
-    <h4><span class="red">75.0 %</span> covered</h4>
+    <h4><span class="green">100.0 %</span> covered</h4>
     <div>
       <b>40</b> relevant lines. 
-      <span class="green"><b>30</b> lines covered</span> and
-      <span class="red"><b>10</b> lines missed.</span>
+      <span class="green"><b>40</b> lines covered</span> and
+      <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
   
@@ -628,14 +628,14 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="46">
-          
+        <li class="covered" data-hits="2" data-linenumber="46">
+          <span class="hits">2</span>
           
           <code class="ruby">    params[:choice][:option_a_votes] = @choice.option_a_votes + params[:choice][:option_a_votes].to_i</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="47">
-          
+        <li class="covered" data-hits="2" data-linenumber="47">
+          <span class="hits">2</span>
           
           <code class="ruby">    params[:choice][:option_b_votes] = @choice.option_b_votes + params[:choice][:option_b_votes].to_i</code>
         </li>
@@ -646,32 +646,32 @@
           <code class="ruby"></code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="49">
-          
+        <li class="covered" data-hits="2" data-linenumber="49">
+          <span class="hits">2</span>
           
           <code class="ruby">    respond_to do |format|</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="50">
-          
+        <li class="covered" data-hits="2" data-linenumber="50">
+          <span class="hits">2</span>
           
           <code class="ruby">      if @choice.update(choice_params)</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="51">
-          
+        <li class="covered" data-hits="2" data-linenumber="51">
+          <span class="hits">2</span>
           
           <code class="ruby">        format.html { redirect_to @choice, notice: &#39;Choice was successfully updated.&#39; }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="52">
-          
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
           
           <code class="ruby">        format.json { render :show, status: :ok, location: @choice }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="53">
-          
+        <li class="covered" data-hits="1" data-linenumber="53">
+          <span class="hits">1</span>
           
           <code class="ruby">        format.js</code>
         </li>
@@ -682,20 +682,20 @@
           <code class="ruby">      else</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="55">
-          
+        <li class="covered" data-hits="2" data-linenumber="55">
+          <span class="hits">2</span>
           
           <code class="ruby">        format.html { render :edit }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="56">
-          
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
           
           <code class="ruby">        format.json { render json: @choice.errors, status: :unprocessable_entity }</code>
         </li>
       
-        <li class="missed" data-hits="0" data-linenumber="57">
-          
+        <li class="covered" data-hits="1" data-linenumber="57">
+          <span class="hits">1</span>
           
           <code class="ruby">        format.js</code>
         </li>
@@ -808,8 +808,8 @@
           <code class="ruby">    def set_choice</code>
         </li>
       
-        <li class="covered" data-hits="7" data-linenumber="76">
-          <span class="hits">7</span>
+        <li class="covered" data-hits="13" data-linenumber="76">
+          <span class="hits">13</span>
           
           <code class="ruby">      @choice = Choice.find(params[:id])</code>
         </li>
@@ -838,8 +838,8 @@
           <code class="ruby">    def choice_params</code>
         </li>
       
-        <li class="covered" data-hits="2" data-linenumber="81">
-          <span class="hits">2</span>
+        <li class="covered" data-hits="4" data-linenumber="81">
+          <span class="hits">4</span>
           
           <code class="ruby">      params.require(:choice).permit(:option, :option_a, :option_b, :option_a_image, :option_b_image, :option_a_votes, :option_b_votes)</code>
         </li>
@@ -2497,8 +2497,8 @@
     <h3>spec/features/choice_spec.rb</h3>
     <h4><span class="green">100.0 %</span> covered</h4>
     <div>
-      <b>33</b> relevant lines. 
-      <span class="green"><b>33</b> lines covered</span> and
+      <b>50</b> relevant lines. 
+      <span class="green"><b>50</b> lines covered</span> and
       <span class="red"><b>0</b> lines missed.</span>
     </div>
   </div>
@@ -2767,7 +2767,7 @@
         <li class="covered" data-hits="1" data-linenumber="44">
           <span class="hits">1</span>
           
-          <code class="ruby">    expect(page).to_not have_content(&quot;Would you like to&quot;) </code>
+          <code class="ruby">    expect(page).to_not have_content(&quot;Would you like to&quot;)</code>
         </li>
       
         <li class="never" data-hits="" data-linenumber="45">
@@ -2777,6 +2777,138 @@
         </li>
       
         <li class="never" data-hits="" data-linenumber="46">
+          
+          
+          <code class="ruby">end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="47">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="48">
+          <span class="hits">1</span>
+          
+          <code class="ruby">describe &quot;edit choices&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="49">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;should change the values of a choice&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="50">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    choice_one = Choice.create({ option: &quot;Would you like to&quot;, option_a: &quot;this&quot;, option_b: &quot;that&quot; })</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="51">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit edit_choice_path(choice_one)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="52">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;Option&quot;, with: &quot;Would you rather code in&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="53">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;Option a&quot;, with: &quot;Ruby&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="54">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;Option b&quot;, with: &quot;Javascript&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="55">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &#39;Update Choice&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="56">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to  have_content(&quot;Javascript&quot;) &amp;&amp; have_content(&quot;Ruby&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="57">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="58">
+          
+          
+          <code class="ruby"></code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="59">
+          <span class="hits">1</span>
+          
+          <code class="ruby">  it &quot;should fail to change the values of a choice given bad input&quot; do</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="60">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    choice_one = Choice.create({ option: &quot;Would you like to&quot;, option_a: &quot;this&quot;, option_b: &quot;that&quot; })</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="61">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    visit edit_choice_path(choice_one)</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="62">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;Option&quot;, with: &quot;&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="63">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;Option a&quot;, with: &quot;Ruby&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="64">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    fill_in &quot;Option b&quot;, with: &quot;Javascript&quot;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="65">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    click_on &#39;Update Choice&#39;</code>
+        </li>
+      
+        <li class="covered" data-hits="1" data-linenumber="66">
+          <span class="hits">1</span>
+          
+          <code class="ruby">    expect(page).to  have_content(&quot;error&quot;)</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="67">
+          
+          
+          <code class="ruby">  end</code>
+        </li>
+      
+        <li class="never" data-hits="" data-linenumber="68">
           
           
           <code class="ruby">end</code>
@@ -3034,14 +3166,14 @@
           <code class="ruby">  config.around(:each) do |example|</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="21">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="12" data-linenumber="21">
+          <span class="hits">12</span>
           
           <code class="ruby">    DatabaseCleaner.cleaning do</code>
         </li>
       
-        <li class="covered" data-hits="10" data-linenumber="22">
-          <span class="hits">10</span>
+        <li class="covered" data-hits="12" data-linenumber="22">
+          <span class="hits">12</span>
           
           <code class="ruby">      example.run</code>
         </li>
