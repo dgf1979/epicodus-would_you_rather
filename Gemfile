@@ -45,4 +45,5 @@ group :development, :test do
   # gem 'launchy'
   gem 'poltergeist'
   gem 'simplecov', require: false
+  gem 'database_cleaner'
 end
