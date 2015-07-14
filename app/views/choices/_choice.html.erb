@@ -1,10 +1,11 @@
 <div class="row">
-
   <div class="col-lg-12">
     <h1 class="page-header"><%= choice.option %>...</h1>
   </div>
+</div>
 
-  <div class="col-lg-3 col-sm-5 col-lg-offset-1 thumb">
+<div class="row">
+  <div class="col-lg-3 col-sm-5 thumb">
     <a id="a" data-id="<%= choice.id %>" class="thumbnail" href='javascript:void(0)'>
       <img class="img-responsive" src="<%= choice.option_a_image %>" alt="">
       <span>A: <%= choice.option_a %></span>
@@ -22,6 +23,23 @@
       <img class="img-responsive" src="<%= choice.option_b_image %>" alt="">
       <span>B: <%= choice.option_b %></span>
     </a>
+  </div>
+
+  <div class="col-lg-4 col-sm-12">
+    <%= form_for([choice, @new_comment]) do |f| %>
+      <div class="row">
+        <div class="input-group">
+          <%= f.text_field :text, class: "form-control" %>
+          <span class="input-group-btn">
+            <%= f.submit "Comment", class: "btn btn-default" %>
+          </span>
+        </div>
+      </div>
+    <% end %>
+
+    <div class="comments-display" id="comments-display-for-choice-<%= choice.id %>">
+      <%= render choice.comments %>
+    </div>
   </div>
 
 </div>

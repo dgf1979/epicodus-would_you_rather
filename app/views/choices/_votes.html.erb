@@ -1,6 +1,5 @@
-<h3>Total Votes: <%= @choice.option_a_votes + @choice.option_b_votes %></h3>
-
 <%= column_chart [
   ["A", @choice.option_a_votes],
   ["B", @choice.option_b_votes]
 ], id: "vote-chart-#{@choice.id}" %>
+<h5>Total Votes: <%= @choice.option_a_votes + @choice.option_b_votes %></h5>

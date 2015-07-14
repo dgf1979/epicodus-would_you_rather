@@ -4,6 +4,7 @@ class ChoicesController < ApplicationController
   # GET /choices
   # GET /choices.json
   def index
+    @new_comment = Comment.new
     @choices = Choice.all
   end
 
